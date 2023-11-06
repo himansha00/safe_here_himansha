@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class verify_passport extends StatefulWidget {
+class drivers_license extends StatefulWidget {
   @override
-  State<verify_passport> createState() => _verify_passportState();
+  State<drivers_license> createState() => _drivers_licenseState();
 }
 
 // ignore: camel_case_types
-class _verify_passportState extends State<verify_passport> {
+class _drivers_licenseState extends State<drivers_license> {
   //const verify_passport({Key? key}) : super(key: key)
   int currentStep = 0;
 

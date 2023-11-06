@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:safehere/features/auth/screens/drivers_license.dart';
 import 'package:safehere/features/auth/screens/verify_passports.dart';
 
 import '../../../colors.dart';
@@ -68,7 +69,7 @@ class verify_2 extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(right: 25),
-              child: buttonDriversLicense(),
+              child: buttonDriversLicense(context),
             ),
             const SizedBox(
               height: 30,
@@ -106,8 +107,12 @@ class verify_2 extends StatelessWidget {
           style: buttonwhite,
         ),
       );
-  Widget buttonDriversLicense() => ElevatedButton.icon(
-        onPressed: () {},
+  Widget buttonDriversLicense(BuildContext context) => ElevatedButton.icon(
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+            return drivers_license();
+          }));
+        },
         icon: SvgPicture.asset('assets/svg/Driverslicense.svg'),
         style: ElevatedButton.styleFrom(
             minimumSize: const Size(double.infinity, 60),
