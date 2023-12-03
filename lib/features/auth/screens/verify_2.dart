@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:safehere/features/auth/national_id.dart';
 import 'package:safehere/features/auth/screens/drivers_license.dart';
 import 'package:safehere/features/auth/screens/verify_passports.dart';
 
@@ -76,7 +77,7 @@ class verify_2 extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(right: 25),
-              child: buttonNationalID(),
+              child: buttonNationalID(context),
             ),
           ],
         ),
@@ -130,8 +131,12 @@ class verify_2 extends StatelessWidget {
           style: buttonwhite,
         ),
       );
-  Widget buttonNationalID() => ElevatedButton.icon(
-        onPressed: () {},
+  Widget buttonNationalID(BuildContext context) => ElevatedButton.icon(
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+            return national_id();
+          }));
+        },
         icon: SvgPicture.asset('assets/svg/NationalID.svg'),
         style: ElevatedButton.styleFrom(
             minimumSize: const Size(double.infinity, 60),

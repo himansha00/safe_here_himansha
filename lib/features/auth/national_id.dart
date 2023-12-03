@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:safehere/features/auth/screens/realTimeSelfie.dart';
 
-class verify_passport extends StatefulWidget {
+class national_id extends StatefulWidget {
   @override
-  State<verify_passport> createState() => _verify_passportState();
+  State<national_id> createState() => _national_idState();
 }
 
 // ignore: camel_case_types
-class _verify_passportState extends State<verify_passport> {
+class _national_idState extends State<national_id> {
   //const verify_passport({Key? key}) : super(key: key)
   int currentStep = 0;
 
@@ -30,6 +29,7 @@ class _verify_passportState extends State<verify_passport> {
             //child: Theme(
             //data: Theme.of(context).copyWith(
             //colorScheme: const ColorScheme.light(primary: Colors.yellow)),
+            // comment
             child: Stepper(
               controlsBuilder: (context, details) {
                 return Container(
@@ -65,12 +65,6 @@ class _verify_passportState extends State<verify_passport> {
                 if (isLastStep) {
                   // ignore: avoid_print
                   print("Steps Completed");
-                  //uploadImage();
-                  //buttonNationalIDyellow(context);
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) {
-                    return realTimeSelfie();
-                  }));
                 } else {
                   setState(() => currentStep += 1);
                 }
@@ -98,7 +92,7 @@ class _verify_passportState extends State<verify_passport> {
                   SizedBox(
                     height: 40,
                   ),
-                  const Text('Upload Your Passport',
+                  const Text('Upload Your National ID',
                       style: TextStyle(
                           color: Color.fromARGB(255, 8, 97, 170),
                           fontSize: 18,
@@ -107,7 +101,7 @@ class _verify_passportState extends State<verify_passport> {
                     height: 5,
                   ),
                   const Text(
-                    'Bio Page',
+                    'Front side',
                     style: TextStyle(
                         color: Color.fromARGB(255, 8, 97, 170),
                         fontSize: 15,
@@ -122,7 +116,7 @@ class _verify_passportState extends State<verify_passport> {
                     height: 25,
                   ),
                   const Text(
-                    'Upload the Bio page of your Passport',
+                    'Upload the Front page of your National ID',
                     style: TextStyle(
                         color: Color.fromARGB(255, 8, 97, 170),
                         fontSize: 15,
@@ -141,7 +135,7 @@ class _verify_passportState extends State<verify_passport> {
                   const SizedBox(
                     height: 40,
                   ),
-                  const Text('Upload Your Passport',
+                  const Text('Upload Your National ID',
                       style: TextStyle(
                           color: Color.fromARGB(255, 8, 97, 170),
                           fontSize: 18,
@@ -150,7 +144,7 @@ class _verify_passportState extends State<verify_passport> {
                     height: 5,
                   ),
                   const Text(
-                    'An Empty Page',
+                    'Back Side',
                     style: TextStyle(
                         color: Color.fromARGB(255, 8, 97, 170),
                         fontSize: 15,
@@ -165,7 +159,7 @@ class _verify_passportState extends State<verify_passport> {
                     height: 25,
                   ),
                   const Text(
-                    'Upload the Stamping page next to the bio page ',
+                    'Upload the Back side of your National ID ',
                     style: TextStyle(
                         color: Color.fromARGB(255, 8, 97, 170),
                         fontSize: 15,
@@ -218,12 +212,8 @@ class _verify_passportState extends State<verify_passport> {
               ),
             )),
       ];
-  Widget buttonNationalIDyellow(BuildContext context) => ElevatedButton.icon(
-        onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-            return realTimeSelfie();
-          }));
-        },
+  Widget buttonNationalIDyellow() => ElevatedButton.icon(
+        onPressed: () {},
         icon: SvgPicture.asset('assets/svg/NationalID.svg'),
         style: ElevatedButton.styleFrom(
             minimumSize: const Size(double.infinity, 60),

@@ -92,7 +92,7 @@ class _drivers_licenseState extends State<drivers_license> {
                   SizedBox(
                     height: 40,
                   ),
-                  const Text('Upload Your Passport',
+                  const Text('Upload Your Drivers License',
                       style: TextStyle(
                           color: Color.fromARGB(255, 8, 97, 170),
                           fontSize: 18,
@@ -101,7 +101,7 @@ class _drivers_licenseState extends State<drivers_license> {
                     height: 5,
                   ),
                   const Text(
-                    'Bio Page',
+                    'Front side',
                     style: TextStyle(
                         color: Color.fromARGB(255, 8, 97, 170),
                         fontSize: 15,
@@ -116,7 +116,7 @@ class _drivers_licenseState extends State<drivers_license> {
                     height: 25,
                   ),
                   const Text(
-                    'Upload the Bio page of your Passport',
+                    'Upload the Front page of your Driverse License',
                     style: TextStyle(
                         color: Color.fromARGB(255, 8, 97, 170),
                         fontSize: 15,
@@ -135,7 +135,7 @@ class _drivers_licenseState extends State<drivers_license> {
                   const SizedBox(
                     height: 40,
                   ),
-                  const Text('Upload Your Passport',
+                  const Text('Upload Your Driverse License',
                       style: TextStyle(
                           color: Color.fromARGB(255, 8, 97, 170),
                           fontSize: 18,
@@ -144,7 +144,7 @@ class _drivers_licenseState extends State<drivers_license> {
                     height: 5,
                   ),
                   const Text(
-                    'An Empty Page',
+                    'Back Side',
                     style: TextStyle(
                         color: Color.fromARGB(255, 8, 97, 170),
                         fontSize: 15,
@@ -159,7 +159,7 @@ class _drivers_licenseState extends State<drivers_license> {
                     height: 25,
                   ),
                   const Text(
-                    'Upload the Stamping page next to the bio page ',
+                    'Upload the Back side of your Driverse License ',
                     style: TextStyle(
                         color: Color.fromARGB(255, 8, 97, 170),
                         fontSize: 15,
